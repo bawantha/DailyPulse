@@ -1,7 +1,9 @@
 package com.bawantha.dailypulse
 
-interface Platform {
-    val name: String
+expect class Platform {
+    val osName: String
+    val osVersion: String
+    val deviceVersion: String
+    val density: Int
+    fun logSystemInfo()
 }
-
-expect fun getPlatform(): Platform
